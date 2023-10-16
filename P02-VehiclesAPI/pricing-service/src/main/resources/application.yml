@@ -1,0 +1,20 @@
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            default-zone: http://localhost:8761/eureka/
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+server:
+    port: 8082
+spring:
+    h2.console.enabled: true
+    h2.console.path: /h2
+    datasource.url: jdbc:h2:mem:prices
+    data:
+        rest:
+            detection-strategy: all
+    application:
+        name: pricing-service
